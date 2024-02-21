@@ -37,14 +37,9 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
                     Out:
                     <ol> 
                         \<ol>
-                        <ol>
-                        \<li> Primeiro item
-                        \</li>
-                        \<li> Segundo item
-                        \</li>
-                        \<li> Terceiro item
-                        \</li>
-                        <ol>
+                        <ol>\<li> Primeiro item\</li></ol>
+                        <ol>\<li> Segundo item\</li></ol>
+                        <ol>\<li> Terceiro item\</li></ol>
                         \</ol>
                     </ol> 
                 </ol>
