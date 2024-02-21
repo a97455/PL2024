@@ -12,16 +12,17 @@ def markdown_to_html(markdown):
     
     # Itálico
     markdown = re.sub(r'\*(.*?)\*', r'<i>\1</i>', markdown)
-    
-    # Lista numerada
-    markdown = re.sub(r'(?<=\n)(.*)', r'<li>\1</li>', markdown)
-    markdown = '<ol>\n' + markdown + '</ol>'
 
     # Imagem
     markdown = re.sub(r'!\[(.*?)\]\((.*?)\)', r'<img src="\2" alt="\1">', markdown)
     
     # Link
     markdown = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', markdown)
+
+    # Parágrafos    
+    markdown = re.sub(r'^\s*$', r'<p>', markdown, flags=re.M)
+    markdown = re.sub(r'^(\S.*)\n\n', r'\1</p>\n\n', markdown, flags=re.M)
+    markdown = markdown.replace('\n', ' ')
     
     return markdown
 
