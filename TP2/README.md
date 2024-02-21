@@ -10,7 +10,7 @@
 
 Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic Syntax" da Cheat Sheet:
 
-1. **Cabeçalhos (linhas iniciadas por "# texto", ou "## texto" ou "### texto")**
+1. \**Cabeçalhos (linhas iniciadas por "# texto", ou "## texto" ou "### texto")\**
    - In: `# Exemplo`
    - Out: `<h1> Exemplo </h1>`
 
