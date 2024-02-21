@@ -20,7 +20,7 @@ def markdown_to_html(markdown):
     markdown = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', markdown)
 
     # Parágrafos    
-    markdown = re.sub(r'^(\S.*)\n\n', r'\1</p>\n\n', markdown, flags=re.M)
+    markdown = re.sub(r'(\n\n)', r'</p>\n\n', markdown)
 
     # Lista Numerada
     markdown = re.sub(r'^\d+\.\s(.+)$', r'<ol><li>\1</li></ol>', markdown)
