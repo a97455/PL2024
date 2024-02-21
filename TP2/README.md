@@ -14,7 +14,7 @@
         <li>Cabeçalhos (linhas iniciadas por "# texto", ou "## texto" ou "### texto")
             <ol>
                 In: # Exemplo
-                Out: \<h1>Exemplo\</h1>
+                \n Out: \<h1> Exemplo \</h1>
             </ol>
         </li>
         <li>Bold (pedaços de texto entre "**"):
