@@ -9,13 +9,50 @@
 ## Descrição
 
 <ol>
-    <li>Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic Syntax" da Cheat Sheet:</li>
+    Criar em Python um pequeno conversor de MarkDown para HTML para os elementos descritos na "Basic Syntax" da Cheat Sheet:
     <ol>
-        <li>Ler o dataset, processá-lo e criar os seguintes resultados:
+        <li>Cabeçalhos (linhas iniciadas por "# texto", ou "## texto" ou "### texto")
             <ol>
-                <li>Lista ordenada alfabeticamente das modalidades desportivas;</li>
-                <li>Percentagens de atletas aptos e inaptos para a prática desportiva;</li>
-                <li>Distribuição de atletas por escalão etário (escalão = intervalo de 5 anos): ... [30-34], [35-39], ...</li>
+                In: # Exemplo
+                Out: <h1>Exemplo</h1>
+            </ol>
+        </li>
+        <li>Bold (pedaços de texto entre "**"):
+            <ol>
+                In: Este é um **exemplo** ...
+                Out: Este é um <b>exemplo</b> ...
+            </ol>
+        </li>
+        <li>Itálico (pedaços de texto entre "*"):
+            <ol>
+                In: Este é um *exemplo* ...
+                Out: Este é um <i>exemplo</i> ...
+            </ol>
+        </li>
+        <li>Lista numerada:
+            <ol>
+                In: 
+                <ol>
+                    <li> Primeiro item
+                    </li>
+                    <li> Segundo item
+                    </li>
+                    <li> Terceiro item
+                    </li>
+                </ol>
+                Out: 
+            </ol>
+        </li>
+        <li>Link: [texto](endereço URL)
+            <ol>
+                In: Como pode ser consultado em [página da UC](http://www.uc.pt)
+                Out: Como pode ser consultado em <a href="http://www.uc.pt">página da UC</a>
+            </ol>
+        </li>
+        <li>Imagem: ![texto alternativo](path para a imagem)
+            <ol>
+                In: Como se vê na imagem seguinte: ![imagem dum coelho](http://www.coellho.com) ...
+                Out: Como pode ser consultado em <a href="http://www.uc.pt">página da UC</a>
             </ol>
         </li>
     </ol>
