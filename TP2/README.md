@@ -45,7 +45,7 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
                 </ol>
             </li>
             <li>Link: [texto](endereço URL)
-                <ol> In: Como pode ser consultado em \[página da UC](http://www.uc.pt)</ol>
+                <ol> In: Como pode ser consultado em \[página da UC] \(http://www.uc.pt)</ol>
                 <ol> Out: Como pode ser consultado em \<a href="http://www.uc.pt">página da UC</a></ol>
             </li>
             <li>Imagem: ![texto alternativo](path para a imagem)
