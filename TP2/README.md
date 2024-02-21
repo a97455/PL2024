@@ -14,7 +14,7 @@
         <li>Cabeçalhos (linhas iniciadas por "# texto", ou "## texto" ou "### texto")
             <ol>
                 In: # Exemplo
-                Out: <h1>Exemplo</h1>
+                Out: \<h1>Exemplo\</h1>
             </ol>
         </li>
         <li>Bold (pedaços de texto entre "**"):
@@ -52,7 +52,7 @@
         <li>Imagem: ![texto alternativo](path para a imagem)
             <ol>
                 In: Como se vê na imagem seguinte: ![imagem dum coelho](http://www.coellho.com) ...
-                Out: Como pode ser consultado em <a href="http://www.uc.pt">página da UC</a>
+                Out: Como se vê na imagem seguinte: <img src="http://www.coellho.com" alt="imagem dum coelho"/> ...
             </ol>
         </li>
     </ol>
