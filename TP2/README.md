@@ -20,7 +20,7 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
    
    In: Este é um \*\*exemplo** ...
    
-   Out: Este é um \<b>exemplo</b> ...
+   Out: Este é um \<b>exemplo\</b> ...
 
 - **Itálico (pedaços de texto entre "\*")**
    
@@ -37,20 +37,22 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
      3. Terceiro item
      
    Out:
-     
-     1. Primeiro item
-     2. Segundo item
-     3. Terceiro item
+
+      \<ol>
+         \<li>Primeiro item\<li>
+         \<li>Segundo item\<li>
+         \<li>Terceiro item\<li>
+      \</ol>
      
 
 - **Link: [texto](endereço URL)**
    
    In: Como pode ser consultado em \[página da UC](http://www.uc.pt)
    
-   Out: Como pode ser consultado em \[página da UC](http://www.uc.pt)
+   Out: Como pode ser consultado em \<a href="http://www.uc.pt">página da UC\</a>
 
 - **Imagem: ![texto alternativo](path para a imagem)**
    
    In: Como se vê na imagem seguinte: !\[imagem dum coelho](http://www.coellho.com) ...
    
-   Out: Como se vê na imagem seguinte: !\[imagem dum coelho](http://www.coellho.com) ...
+   Out:  Como se vê na imagem seguinte: \<img src="http://www.coellho.com" alt="imagem dum coelho"/> ...
