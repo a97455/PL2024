@@ -38,11 +38,11 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
      
    Out:
    
-      \<ol>
-         \<li>Primeiro item\<li>
-         \<li>Segundo item\<li>
-         \<li>Terceiro item\<li>
-      \</ol>
+      <ol>
+         <li>Primeiro item<li>
+         <li>Segundo item<li>
+         <li>Terceiro item<li>
+      </ol>
 
 - **Link: [texto](endereço URL)**
    
