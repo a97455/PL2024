@@ -17,11 +17,11 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
             </li>
             <li>Bold (pedaços de texto entre "**"):
                 <ol>In: Este é um \** exemplo \** ...</ol>
-                <ol>Out: Este é um <b>exemplo</b> ...</ol>
+                <ol>Out: Este é um \<b> exemplo \</b> ...</ol>
             </li>
             <li>Itálico (pedaços de texto entre "*"):
-                <ol>In: Este é um *exemplo* ...</ol>
-                <ol>Out: Este é um <i>exemplo</i> ...</ol>
+                <ol>In: Este é um \* exemplo \* ...</ol>
+                <ol>Out: Este é um \<i> exemplo \</i> ...</ol>
             </li>
             <li>Lista numerada:
                 <ol>
@@ -34,7 +34,19 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
                         <li> Terceiro item
                         </li>
                     </ol>
-                    Out: 
+                    Out:
+                    <ol> 
+                        \<ol>
+                        <ol>
+                        \<li> Primeiro item
+                        \</li>
+                        \<li> Segundo item
+                        \</li>
+                        \<li> Terceiro item
+                        \</li>
+                        <ol>
+                        \</ol>
+                    </ol> 
                 </ol>
             </li>
             <li>Link: [texto](endereço URL)
