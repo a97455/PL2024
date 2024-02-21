@@ -32,12 +32,12 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
    
    In:
      
-      1\. Primeiro item
-      2\. Segundo item
-      3\. Terceiro item
+     1. Primeiro item
+     2. Segundo item
+     3. Terceiro item
      
    Out:
-
+   
       \<ol>
          \<li>Primeiro item\<li>
          \<li>Segundo item\<li>
