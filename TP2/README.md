@@ -43,7 +43,6 @@ Criar em Python um pequeno conversor de MarkDown para HTML para os elementos des
          \<li>Segundo item\<li>
          \<li>Terceiro item\<li>
       \</ol>
-     
 
 - **Link: [texto](endereço URL)**
    
