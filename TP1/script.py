@@ -31,8 +31,7 @@ def group_by_age(entries):
     return age_groups
 
 
-
-def main():
+if __name__ == "__main__":
     filename = 'emd.csv'
     data = read_csv(filename)
     
@@ -50,8 +49,3 @@ def main():
     print("Distribuição de atletas por escalão etário:")
     for age_group, count in sorted(age_groups.items()):
         print(f"Idades {age_group} - {age_group + 4}: {count}")
-
-
-
-if __name__ == "__main__":
-    main()
