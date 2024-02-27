@@ -11,7 +11,7 @@ def calcular_soma(texto): ##calcula a soma dos doversos numeros entre dois stops
 
 if __name__ == "__main__":
     with open (sys.argv[1],'r') as f:
-        partes = re.split(r'\b(ON|OFF|equal)\b', f.read(), flags=re.I)
+        partes = re.split(r'(ON|OFF|=)', f.read(), flags=re.I)
         total = 0
         ligado = False
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
                 ligado = True
             elif parte.upper() == 'OFF':
                 ligado = False
-            elif parte.upper() == 'EQUAL':
+            elif parte == '=':
                 print("Soma dos números até o momento:", total)
             elif ligado:
                 total += calcular_soma(parte)
