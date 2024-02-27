@@ -1,21 +1,26 @@
 import re
 import sys
 
-def sumOnOff(file):
-    sum = 0
-    on = False
-    numeros = re.findall(r'\d+', file)
+def calcular_soma(texto): ##calcula a soma dos doversos numeros entre dois stops (ON|OFF|=)
+    soma = 0
+    numeros = re.findall(r'\b\d+\b', texto)
     for num in numeros:
-        if on:
-            sum += int(num)
-        if re.search(r'ON', file, re.I):
-            on = True
-        elif re.search(r'OFF', file, re.I):
-            on = False
-        ## elif re.search(r'=', file):
-        print("Soma até o momento:", sum)
+        soma += int(num)
+    return soma
 
 
 if __name__ == "__main__":
-    with open(sys.argv[1],'r', encoding='utf-8') as f:
-        sumOnOff(f.read())
+    with open (sys.argv[1],'r') as f:
+        partes = re.split(r'\b(ON|OFF|equal)\b', f.read(), flags=re.I)
+        total = 0
+        ligado = False
+
+        for parte in partes:
+            if parte.upper() == 'ON':
+                ligado = True
+            elif parte.upper() == 'OFF':
+                ligado = False
+            elif parte.upper() == 'EQUAL':
+                print("Soma dos números até o momento:", total)
+            elif ligado:
+                total += calcular_soma(parte)
