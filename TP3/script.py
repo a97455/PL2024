@@ -3,7 +3,7 @@ import sys
 
 def calcular_soma(texto): ##calcula a soma dos doversos numeros entre dois stops (ON|OFF|=)
     soma = 0
-    numeros = re.findall(r'\b\d+\b', texto)
+    numeros = re.findall(r'\d+', texto)
     for num in numeros:
         soma += int(num)
     return soma
