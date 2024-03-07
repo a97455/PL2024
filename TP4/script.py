@@ -24,8 +24,7 @@ def createSqlLexer(data):
 
     for tok in lexer:
         print(tok.type + ':', tok.value)
-
-
+        
 
 if __name__ == "__main__":
     data = 'Select id, nome, salario from empregados where salario >= 820;'
