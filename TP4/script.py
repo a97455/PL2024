@@ -1,5 +1,4 @@
 import ply.lex as lex
-import sys
 
 def createSqlLexer(data):
     tokens = (
