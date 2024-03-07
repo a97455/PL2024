@@ -3,13 +3,15 @@ import ply.lex as lex
 def createSqlLexer(data):
     tokens = (
         'SQL',
+        'NUMBER',
         'WORD',
         'OP',
         'DELIMITERS'
     )
 
     t_SQL = r'Select|from|where'
-    t_WORD = r'\b\w+\b'
+    t_NUMBER = r'\d+'
+    t_WORD = r'\b[a-zA-Z]+\b'
     t_OP = r'>='
     t_DELIMITERS = r',|;'
     t_ignore  = ' ' #ignore spaces
