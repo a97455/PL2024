@@ -10,4 +10,4 @@
 
 O TPC consiste em desenvolver um script Pyhton, que implemente um analisador léxico para a seguinte query SQL:
 
-- Select id, nome, salario from empregados where salario >=820;
+- Select id, nome, salario from empregados where salario >= 820;
