@@ -18,7 +18,7 @@ O TPC consiste em desenvolver um script Pyhton que implemente uma máquina de ve
         2 bolo 60cent
         3 coca-cola 1euro
 
--   **INPUT:** MOEDA 1euro, 10cent, 20 cent
+-   **INPUT:** MOEDA 1euro, 10cent, 20cent
     
     **OUTPUT:** Saldo = 1euro 30cent
 
