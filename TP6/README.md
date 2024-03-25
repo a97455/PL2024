@@ -8,12 +8,36 @@
 
 ## Descrição
 
-O TPC consiste em desenvolver um script Pyhton que implemente uma Gramática Independente de Contexto (LL1) que permita tratar de prioridades de operações matemáticas, calculando os LA's (Look Aheads) dos diversos predicados. 
+O TPC consiste em desenvolver uma Gramática Independente de Contexto (LL1) que permita tratar de prioridades de operações matemáticas, calculando os LA's (Look Aheads) dos diversos predicados.
 
-Para tal o programa deverá ser capaz de realizar somas como:
+Para tal o programa será composto pelos seguintes predicados:
 
-- **OUTPUT:** ? a (Imprime o valor de a)
+- Expression -> Term SumorSub 
 
-- **INPUT:** 
-    1. ! a = 5 (Atribui o valor 5 a 'a');
-    2. ! c = a*2/(7-3) (Faz o cálculo, guardando o seu valor em 'c', neste caso, c=1).
+- SumorSub -> + Term SumorSub
+            | - Term SumorSub
+            | ε 
+
+- Term -> Factor MultiorDiv
+
+- MultiorDiv -> * Factor MultiorDiv 
+              | / Factor MultiorDiv
+              | ε
+
+- Factor -> (Expression) | Number
+
+Com esta gramática, a expressão 2*(5+4)+4/2 será analizada da seguinte forma:
+
+- 2 -> Term -> Factor -> Number
+- \* -> Term -> MultiorDiv -> *
+    - (5+4) -> Factor -> Expression
+        - 5 -> Term -> Factor -> Number
+        - \+ -> SumorSub
+        - 4 -> Term -> Factor -> Number
+    - MultiorDiv -> ε
+- \+ -> SumorSub -> +
+    - 4 -> Term -> Factor -> Number
+    - SumorSub -> ε
+- / -> Term -> MultiorDiv -> /
+    - 2 -> Factor -> Number 
+    - MultiorDiv -> ε
